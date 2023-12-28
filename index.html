@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Navbar Example</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="assets/MicrosoftTeams-image.png" alt="Logo" width="100" height="100">
+        </div>
+        <div class="navbar-center">
+            <ul>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Accelerators</a></li>
+                <li><a href="#">Industries</a></li>
+                <li><a href="#">Insights</a></li>
+                <li><a href="#">Testimonials</a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <button class="lets-talk-btn">Let's Talk</button>
+        </div>
+    </nav>
+
+    <div class="image-block">
+        <img src="https://www.future-processing.com/blog/wp-content/uploads/2022/09/What-are-Cloud-computing-advantages-and-disadvantages-launch-cover.jpg" alt="Devop-audit">
+        <div class="image-text">
+            <p>DevOps Audit</p>
+        </div>
+    </div>
+
+    <div class="content-block">
+        <div class="text-block">
+            <p>
+                DevOps Audit is the measurement to find the state of DevOps Culture and Practice in a Software development environment. Since it is increasingly becoming part of the IT industrial cycle of software development, it ought to have a proper measurement to boost the product cycle by improving through required points generated after an Audit. It aims to benchmark the current DevOps Practices to industry best practices as per the DevOps Maturity Model.
+            </p>
+            <p>
+                Knoldus Audit Practice allows you to ensure that the product you are building has the right architecture, design, code quality, process for development, and a CI/CD enabled DevOps process. Our analysis and recommendations report makes you and your product successful.
+            </p>
+        </div>
+        <div class="image-block-audit">
+            <img src="assets/d-1.png" alt="DevOps Audit Image">
+        </div>
+    </div>
+
+    <div class="container">
+
+      <div class="pillar-container">
+        <div class="pillar" onclick="jumpToPillar(1)">
+          Culture & Process <span class="question-indicator" id="questionIndicator1"
+            >0</span
+          >
+        </div>
+  
+        <div class="pillar" onclick="jumpToPillar(2)">
+          Collaboration & Sharing<span class="question-indicator" id="questionIndicator2"
+            >0</span
+          >
+        </div>
+  
+        <div class="pillar" onclick="jumpToPillar(3)">
+          Automation<span class="question-indicator" id="questionIndicator3"
+            >0</span
+          >
+        </div>
+  
+        <div class="pillar" onclick="jumpToPillar(4)">
+          Monitoring<span class="question-indicator" id="questionIndicator4"
+            >0</span
+          >
+        </div>
+  
+        <div class="pillar" onclick="jumpToPillar(5)">
+          Security & Governance<span class="question-indicator" id="questionIndicator5"
+            >0</span
+          >
+        </div>
+  
+        <!-- <div class="pillar" onclick="jumpToPillar(6)">
+          Performance Efficiency<span class="question-indicator" id="questionIndicator6"
+            >0</span
+          >
+        </div> -->
+        <!-- Repeat for other pillars -->
+      </div>
+  
+      <!-- Pillar container for side navigation -->
+      <!-- <div class="pillar-container">
+   <div class="pillar" onclick="jumpToPillar(1)">Pillar 1</div>
+   <div class="pillar" onclick="jumpToPillar(2)">Pillar 2</div>
+   <div class="pillar" onclick="jumpToPillar(3)">Pillar 3</div>
+   <div class="pillar" onclick="jumpToPillar(4)">Pillar 4</div>
+   <div class="pillar" onclick="jumpToPillar(5)">Pillar 5</div>
+   <div class="pillar" onclick="jumpToPillar(6)">Pillar 6</div>
+   </div> -->
+  
+      <!-- Quiz container -->
+      <div id="quizContainer">
+        <!-- Pillar 1 -->
+        <div class="pillar" id="pillar1">
+          <h2>Pillar 1 : Culture & Process</h2>
+          <div class="question" id="pillar1_q1">
+            <h3>How much DevOps Awareness is there in the project?</h3>
+            <button onclick="showOptions('pillar1_q1')">Choose One</button>
+            <select
+              name="pillar1_q1"
+              id="pillar1_q1_select"
+              style="display: none"
+              onchange="enableNextButton('pillar1_indicator', 'pillar1_q1','1',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">There is no understanding of DevOps.</option>
+              <option value="1">There is a basic understanding of DevOps.</option>
+              <option value="2">The team has a brief experience in DevOps</option>
+              <option value="3">There is an experienced DevOps team. </option>
+              <option value="4">There is an optimized DevOps Culture. </option>
+            </select>
+          </div>
+  
+          <div class="question" id="pillar1_q2">
+            <h3>What is the level of DevOps skills of the project team? </h3>
+            <button onclick="showOptions('pillar1_q2')">Choose One</button>
+            <select
+              name="pillar1_q2"
+              id="pillar1_q2_select"
+              style="display: none"
+              onchange="enableNextButton('pillar1_indicator', 'pillar1_q2','1',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">There are no skills of DevOps in the team. </option>
+              <option value="1">The team knows about basic tools used in DevOps. </option>
+              <option value="2">The team is skilled in DevOps tools. </option>
+              <option value="3">There is a particular DevOps tool team</option>
+              <option value="4">There are cross-functional teams</option>
+            </select>
+          </div>
+
+          <div class="question" id="pillar1_q3">
+            <h3>Are your Dev and Ops teams synchronous? </h3>
+            <button onclick="showOptions('pillar1_q3')">Choose One</button>
+            <select
+              name="pillar1_q3"
+              id="pillar1_q3_select"
+              style="display: none"
+              onchange="enableNextButton('pillar1_indicator', 'pillar1_q3','1',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">The Dev and Ops team work independently. </option>
+              <option value="1">There are periodical meetings of the Dev and Ops team.</option>
+              <option value="2">There is a feedback system between Dev and Ops teams. </option>
+              <option value="3">The Dev and Ops are aligned in a pipeline</option>
+              <option value="4">The Dev and Ops teams work in total sync</option>
+            </select>
+          </div>
+
+          <div class="question" id="pillar1_q4">
+            <h3>Do teams feel the need to adopt DevOps? </h3>
+            <button onclick="showOptions('pillar1_q4')">Choose One</button>
+            <select
+              name="pillar1_q4"
+              id="pillar1_q4_select"
+              style="display: none"
+              onchange="enableNextButton('pillar1_indicator', 'pillar1_q4','1',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">There is no requirement for DevOps. </option>
+              <option value="1">Their DevOps is used optionally.</option>
+              <option value="2">The teams are enthusiastic about DevOps.</option>
+              <option value="3">There is proper implementation and use of DevOps</option>
+              <option value="4">There is a dedicated team for DevOps</option>
+            </select>
+          </div>
+
+          <div class="question" id="pillar1_q5">
+            <h3>Do teams feel the need to adopt DevOps? </h3>
+            <button onclick="showOptions('pillar1_q5')">Choose One</button>
+            <select
+              name="pillar1_q5"
+              id="pillar1_q5_select"
+              style="display: none"
+              onchange="enableNextButton('pillar1_indicator', 'pillar1_q5','1',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">There is no requirement for DevOps.</option>
+              <option value="1">Their DevOps is used optionally</option>
+              <option value="2">The teams are enthusiastic about DevOps.</option>
+              <option value="3">There is proper implementation and use of DevOps</option>
+              <option value="4">There is a dedicated team for DevOps. </option>
+            </select>
+          </div>
+  
+          <!-- Add more questions for Pillar 1 -->
+          <!-- Repeat this structure for Questions 2 to 5 in Pillar 1 -->
+          <!-- Add pillar indicator -->
+          <div class="pillar-indicator">
+            <span id="pillar1_indicator" style="font-size: 25px;font-weight: 700;">0</span><span style="font-size: 25px;font-weight: 700;">/5</span>
+          </div>
+        </div>
+  
+  
+  
+        <!-- Pillar 2 -->
+        <div class="pillar" id="pillar2" style="display: none">
+          <h2>Pillar 2: Collaboration & Sharing  </h2>
+          <div class="question" id="pillar2_q1">
+            <h3>How is the communication among your teams?</h3>
+            <button onclick="showOptions('pillar2_q1')">Choose One</button>
+            <select
+              name="pillar2_q1"
+              id="pillar2_q1_select"
+              style="display: none"
+              onchange="enableNextButton('pillar2_indicator', 'pillar2_q1','2',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">The communication is done at the individual level. </option>
+              <option value="1">Only the manager and client communicate. </option>
+              <option value="2">There is a common platform to report the work. </option>
+              <option value="3">There is a periodical meeting for teams. </option>
+              <option value="4">There is a communication channel for the teams. </option>
+            </select>
+          </div>
+  
+          <div class="question" id="pillar2_q2">
+            <h3>How is knowledge shared? </h3>
+            <button onclick="showOptions('pillar2_q2')">Choose One</button>
+            <select
+              name="pillar2_q2"
+              id="pillar2_q2_select"
+              style="display: none"
+              onchange="enableNextButton('pillar2_indicator', 'pillar2_q2','2',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">There is no knowledge sharing.</option>
+              <option value="1">There is limited sharing of knowledge. </option>
+              <option value="2">The knowledge is shared moderately among teams.</option>
+              <option value="3">Knowledge is shared at a team level.</option>
+              <option value="4">Effective sharing of knowledge at an individual level.</option>
+            </select>
+          </div>
+
+          <div class="question" id="pillar2_q3">
+            <h3>Are there regular meetings? </h3>
+            <button onclick="showOptions('pillar2_q3')">Choose One</button>
+            <select
+              name="pillar2_q3"
+              id="pillar2_q3_select"
+              style="display: none"
+              onchange="enableNextButton('pillar2_indicator', 'pillar2_q3','2',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">There are no meetings. </option>
+              <option value="1">There is a regular meeting with the manager.</option>
+              <option value="2">There are daily standup meetings.</option>
+              <option value="3">There are meetings like Retrospective meet. </option>
+              <option value="4">The meetings are documented and shared. </option>
+            </select>
+          </div>
+
+          <div class="question" id="pillar2_q4">
+            <h3>How do people on the team share ideas/concern with others? </h3>
+            <button onclick="showOptions('pillar2_q4')">Choose One</button>
+            <select
+              name="pillar2_q4"
+              id="pillar2_q4_select"
+              style="display: none"style="display: none"
+              onchange="enableNextButton('pillar2_indicator', 'pillar2_q4','2',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">There is no mechanism to share ideas/concerns.</option>
+              <option value="1">The team shares their points with the manager. </option>
+              <option value="2">There are meetings for concerns and ideas. </option>
+              <option value="3">There are channels to share ideas and concerns. </option>
+              <option value="4">There is direct communication between individuals. </option>
+            </select>
+          </div>
+
+          <div class="question" id="pillar2_q5">
+            <h3>Does your team follow proper documentation? </h3>
+            <button onclick="showOptions('pillar2_q5')">Choose One</button>
+            <select
+              name="pillar2_q5"
+              id="pillar2_q5_select"
+              style="display: none"
+              onchange="enableNextButton('pillar2_indicator', 'pillar2_q5','2',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">There is no documentation.</option>
+              <option value="1">There is client-side documentation</option>
+              <option value="2">The documentation is provided for every silo work. </option>
+              <option value="3">The teams follow best practice guidelines. </option>
+              <option value="4">There is proper documentation for the whole project. </option>
+            </select>
+          </div>
+  
+          <!-- Add more questions for Pillar 1 -->
+          <!-- Repeat this structure for Questions 2 to 5 in Pillar 1 -->
+          <!-- Add pillSustainabilityar indicator -->
+          <div class="pillar-indicator">
+            <span id="pillar2_indicator" style="font-size: 25px;font-weight: 700;">0</span><span style="font-size: 25px;font-weight: 700;">/5</span>
+          </div>
+        </div>
+  
+  
+  
+        <!--Pillar 3 -->
+        <div class="pillar" id="pillar3" style="display: none">
+          <h2>Pillar 3: Automation        </h2>
+          <div class="question" id="pillar3_q1">
+            <h3>How much automation is there in your project? </h3>
+            <button onclick="showOptions('pillar3_q1')">Choose One</button>
+            <select
+              name="pillar3_q1"
+              id="pillar3_q1_select"
+              style="display: none"
+              onchange="enableNextButton('pillar3_indicator', 'pillar3_q1','3',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">There is no automation. </option>
+              <option value="1">There is automation in the build and testing processes.</option>
+              <option value="2">There is automation from code-commit to deployment.  </option>
+              <option value="3">There is automation in monitoring and code review. </option>
+              <option value="4">There is full automation. </option>
+            </select>
+          </div>
+  
+          <div class="question" id="pillar3_q2">
+            <h3>What is the branching strategy of the project? </h3>
+            <button onclick="showOptions('pillar3_q2')">Choose One</button>
+            <select
+              name="pillar3_q2"
+              id="pillar3_q2_select"
+              style="display: none"
+              onchange="enableNextButton('pillar3_indicator', 'pillar3_q2','3',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">There are no branches.</option>
+              <option value="1">There are branches for dev and production. </option>
+              <option value="2">There are branches for feature and release branches. </option>
+              <option value="3">There are branches for Build, QA, Pre Production, Testing, and production. </option>
+              <option value="4">There is complete automation in branching for commit, review, and merge. </option>
+            </select>
+          </div>
+
+          <div class="question" id="pillar3_q3">
+            <h3>How are the builds managed? </h3>
+            <button onclick="showOptions('pillar3_q3')">Choose One</button>
+            <select
+              name="pillar3_q3"
+              id="pillar3_q3_select"
+              style="display: none"
+              onchange="enableNextButton('pillar3_indicator', 'pillar3_q3','3',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">The builds are done manually. </option>
+              <option value="1">The pipeline builds automatically.</option>
+              <option value="2">There are desired metrics for build's success or failure.</option>
+              <option value="3">The build artifacts are stored on the platform like Jfrog.</option>
+              <option value="4">The builds are in sync with previous and next builds. </option>
+            </select>
+          </div>
+
+          <div class="question" id="pillar3_q4">
+            <h3>How is the testing performed? </h3>
+            <button onclick="showOptions('pillar3_q4')">Choose One</button>
+            <select
+              name="pillar3_q4"
+              id="pillar3_q4_select"
+              style="display: none"style="display: none"
+              onchange="enableNextButton('pillar3_indicator', 'pillar3_q4','3',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">The testing is done by testers only. </option>
+              <option value="1">There are integration and unit tests. </option>
+              <option value="2">There is testing automation with pipeline servers. </option>
+              <option value="3">The testing reports are automatically created. </option>
+              <option value="4">The testing automation is in sync with each step. </option>
+            </select>
+          </div>
+          <div class="question" id="pillar3_q5">
+            <h3>What is the release process in the project? </h3>
+            <button onclick="showOptions('pillar3_q5')">Choose One</button>
+            <select
+              name="pillar3_q5"
+              id="pillar3_q5_select"
+              style="display: none"
+              onchange="enableNextButton('pillar3_indicator', 'pillar3_q5','3',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">The release process is manual. </option>
+              <option value="1">There is automation before release till a test.</option>
+              <option value="2">The release is automated.</option>
+              <option value="3">There are build checks before release. </option>
+              <option value="4">The commit to release process is fully automated. </option>
+            </select>
+          </div>
+  
+          <!-- Add more questions for Pillar 1 -->
+          <!-- Repeat this structure for Questions 2 to 5 in Pillar 1 -->
+          <!-- Add pillar indicator -->
+          <div class="pillar-indicator">
+            <span id="pillar3_indicator" style="font-size: 25px;font-weight: 700;">0</span><span style="font-size: 25px;font-weight: 700;">/5</span>
+          </div>
+        </div>
+  
+  
+        <!-- pillar 4 -->
+        <div class="pillar" id="pillar4" style="display: none">
+          <h2>Pillar 4 : Monitoring        </h2>
+          <div class="question" id="pillar4_q1">
+            <h3>How well is the monitoring implemented?</h3>
+            <button onclick="showOptions('pillar4_q1')">Choose One</button>
+            <select
+              name="pillar4_q1"
+              id="pillar4_q1_select"
+              style="display: none"
+              onchange="enableNextButton('pillar4_indicator', 'pillar4_q1','4',value)"
+            >
+            <option value="choose">Choose an option</option>
+            <option value="0">There is no monitoring. </option>
+            <option value="1">There is the use of basic monitoring tools. </option>
+            <option value="2">There is in-depth monitoring as per the requirement. </option>
+            <option value="3">Automated monitoring system at every step.</option>
+            <option value="4">Centralized automated monitoring system.</option>
+            </select>
+          </div>
+  
+          <div class="question" id="pillar4_q2">
+            <h3>How is traceability implemented? </h3>
+            <button onclick="showOptions('pillar4_q2')">Choose One</button>
+            <select
+              name="pillar4_q2"
+              id="pillar4_q2_select"
+              style="display: none"
+              onchange="enableNextButton('pillar4_indicator', 'pillar4_q2','4',value)"
+            >
+            <option value="choose">Choose an option</option>
+            <option value="0">The tracing is done manually.</option>
+            <option value="1">There is manual tracing after automatic testing. </option>
+            <option value="2">Error monitoring is used in Deployment.</option>
+            <option value="3">Tracing is done by different tracing tools in different environments.</option>
+            <option value="4">Tracing is automated using dashboard APIs.</option>
+            </select>
+          </div>
+          <div class="question" id="pillar4_q3">
+            <h3>How are logs monitored? </h3>
+            <button onclick="showOptions('pillar4_q3')">Choose One</button>
+            <select
+              name="pillar4_q3"
+              id="pillar4_q3_select"
+              style="display: none"
+              onchange="enableNextButton('pillar4_indicator', 'pillar4_q3','4',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">There is no log monitoring. </option>
+              <option value="1">There is basic monitoring of logs.</option>
+              <option value="2">There is the use of log aggregation tools.</option>
+              <option value="3">There is an event trigger system on the basis of logs</option>
+              <option value="4">The log generation and monitor are fully connected. </option>
+            </select>
+          </div>
+          <div class="question" id="pillar4_q4">
+            <h3>What is used for alerting? </h3>
+            <button onclick="showOptions('pillar4_q4')">Choose One</button>
+            <select
+              name="pillar4_q4"
+              id="pillar4_q4_select"
+              style="display: none"style="display: none"
+              onchange="enableNextButton('pillar4_indicator', 'pillar4_q4','4',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">There is no alerting system. </option>
+              <option value="1">There are alerts like warnings in a testing phase. </option>
+              <option value="2">There is an alert system with a monitor dashboard. </option>
+              <option value="3">There is a common platform for alerts. </option>
+              <option value="4">The alert system is fully automated with minimum manual interruptions.</option>
+            </select>
+          </div>
+          <div class="question" id="pillar4_q5">
+            <h3>How well is the project monitoring dashboard configured? </h3>
+            <button onclick="showOptions('pillar4_q5')">Choose One</button>
+            <select
+              name="pillar4_q5"
+              id="pillar4_q5_select"
+              style="display: none"
+              onchange="enableNextButton('pillar4_indicator', 'pillar4_q5','4',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">There is no dashboard. </option>
+              <option value="1">There is a basic monitoring dashboard.</option>
+              <option value="2">The monitoring dashboard is dynamically updated.</option>
+              <option value="3">The monitoring dashboard is connected to every environment</option>
+              <option value="4">The monitoring dashboard is fully automated with zero-lag.</option>
+            </select>
+          </div>
+  
+          <!-- Add more questions for Pillar 1 -->
+          <!-- Repeat this structure for Questions 2 to 5 in Pillar 1 -->
+          <!-- Add pillar indicator -->
+          <div class="pillar-indicator">
+            <span id="pillar4_indicator" style="font-size: 25px;font-weight: 700;">0</span><span style="font-size: 25px;font-weight: 700;">/5</span>
+          </div>
+        </div>
+  
+        <!-- pillar 5 -->
+        <div class="pillar" id="pillar5" style="display: none">
+          <h2>Pillar 5 : Security & Governance        </h2>
+          <div class="question" id="pillar5_q1">
+            <h3>What is the level of security management in the project? </h3>
+            <button onclick="showOptions('pillar5_q1')">Choose One</button>
+            <select
+              name="pillar5_q1"
+              id="pillar5_q1_select"
+              style="display: none"
+              onchange="enableNextButton('pillar5_indicator', 'pillar5_q1','5',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">There is no security management. </option>
+              <option value="1">There are basic security checks. </option>
+              <option value="2">There is periodic auditing for security. </option>
+              <option value="3">Security is integrated into every step. </option>
+              <option value="4">The security is continuous and automated</option>
+            </select>
+          </div>
+  
+          <div class="question" id="pillar5_q2">
+            <h3>How do you manage secrets? </h3>
+            <button onclick="showOptions('pillar5_q2')">Choose One</button>
+            <select
+              name="pillar5_q2"
+              id="pillar5_q2_select"
+              style="display: none"
+              onchange="enableNextButton('pillar5_indicator', 'pillar5_q2','5',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">There is no management of secrets. </option>
+              <option value="1">There is manual management of secrets.</option>
+              <option value="2">The secrets are managed with tool assistance.</option>
+              <option value="3">The secrets are managed in sync with CM tools. </option>
+              <option value="4">The secrets are automated with a dedicated tool. </option>
+            </select>
+          </div>
+          <div class="question" id="pillar5_q3">
+            <h3>What guidelines are used for security? </h3>
+            <button onclick="showOptions('pillar5_q3')">Choose One</button>
+            <select
+              name="pillar5_q3"
+              id="pillar5_q3_select"
+              style="display: none"
+              onchange="enableNextButton('pillar5_indicator', 'pillar5_q3','5',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">There are no security guidelines. </option>
+              <option value="1">There are periodic guidelines for security.</option>
+              <option value="2">The security guidelines are part of the testing phase.</option>
+              <option value="3">Security guidelines are part of the development phase. </option>
+              <option value="4">Security guidelines are automated at every level. </option>
+            </select>
+          </div>
+          <div class="question" id="pillar5_q4">
+            <h3>How well is encryption used?</h3>
+            <button onclick="showOptions('pillar5_q4')">Choose One</button>
+            <select
+              name="pillar5_q4"
+              id="pillar5_q4_select"
+              style="display: none"style="display: none"
+              onchange="enableNextButton('pillar5_indicator', 'pillar5_q4','5',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">There is no use of encryption.</option>
+              <option value="1">Encryption is used in a specific environment.</option>
+              <option value="2">Encryption is used in production.</option>
+              <option value="3">Encryption is used in sensitive environments</option>
+              <option value="4">  Encryption is used for every communication.</option>
+            </select>
+          </div>
+          <div class="question" id="pillar5_q5">
+            <h3>Does the team monitor security regularly? </h3>
+            <button onclick="showOptions('pillar5_q5')">Choose One</button>
+            <select
+              name="pillar5_q5"
+              id="pillar5_q5_select"
+              style="display: none"
+              onchange="enableNextButton('pillar5_indicator', 'pillar5_q5','5',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">There is no security monitoring. </option>
+              <option value="1">There is periodic security monitoring.</option>
+              <option value="2">Security is monitored during deployments.</option>
+              <option value="3">There is an automated system for security monitoring.</option>
+              <option value="4">Security is monitored continuously. </option>
+            </select>
+          </div>
+  
+          <!-- Add more questions for Pillar 1 -->
+          <!-- Repeat this structure for Questions 2 to 5 in Pillar 1 -->
+          <!-- Add pillar indicator -->
+          <div class="pillar-indicator">
+            <span id="pillar5_indicator" style="font-size: 25px;font-weight: 700;">0</span><span style="font-size: 25px;font-weight: 700;">/5</span>
+          </div>
+        </div>
+  
+        <!-- pillar 6 -->
+        <div class="pillar" id="pillar6" style="display: none">
+          <h2>Pillar 6 : Performance Efficiency</h2>
+          <div class="question" id="pillar6_q1">
+            <h3>How do you select the best-performing architecture?</h3>
+            <button onclick="showOptions('pillar6_q1')">Choose One</button>
+            <select
+              name="pillar6_q1"
+              id="pillar6_q1_select"
+              style="display: none"
+              onchange="enableNextButton('pillar6_indicator', 'pillar6_q1','6',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">No</option>
+              <option value="1">Ad Hoc Decision</option>
+              <option value="2">Reactive Decision</option>
+              <option value="3">Data-Driven Decision</option>
+              <option value="4">Predictive Optimization</option>
+              <option value="5">Continuous Improvement and Optimization</option>
+            </select>
+          </div>
+  
+          <div class="question" id="pillar6_q2">
+            <h3>How can you factor cost requirements into decisions?</h3>
+            <button onclick="showOptions('pillar6_q2')">Choose One</button>
+            <select
+              name="pillar6_q2"
+              id="pillar6_q2_select"
+              style="display: none"
+              onchange="enableNextButton('pillar6_indicator', 'pillar6_q2','6',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">No</option>
+              <option value="1">No Consideration of Cost</option>
+              <option value="2">Afterthought Cost Assessment</option>
+              <option value="3">Early Cost Consideration</option>
+              <option value="4">Integrated Cost Management</option>
+              <option value="5">Automated Cost Optimization</option>
+            </select>
+          </div>
+          <div class="question" id="pillar6_q3">
+            <h3>How do you Evaluate the available compute options?</h3>
+            <button onclick="showOptions('pillar6_q3')">Choose One</button>
+            <select
+              name="pillar6_q3"
+              id="pillar6_q3_select"
+              style="display: none"
+              onchange="enableNextButton('pillar6_indicator', 'pillar6_q3','6',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">No</option>
+              <option value="1">Basic Understanding</option>
+              <option value="2">Awareness of Containers</option>
+              <option value="3">Practical VM and Container Usage</option>
+              <option value="4">Multi-Cloud and Serverless Exploration</option>
+              <option value="5">Workload-Centric Optimization</option>
+            </select>
+          </div>
+          <div class="question" id="pillar6_q4">
+            <h3>How do you continually evaluate compute needs based on metrics?</h3>
+            <button onclick="showOptions('pillar6_q4')">Choose One</button>
+            <select
+              name="pillar6_q4"
+              id="pillar6_q4_select"
+              style="display: none"style="display: none"
+              onchange="enableNextButton('pillar6_indicator', 'pillar6_q4','6',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">No</option>
+              <option value="1">Reactive Evaluation</option>
+              <option value="2">Scheduled Evaluation</option>
+              <option value="3">Metric-Driven Scaling</option>
+              <option value="4">Predictive Analytics</option>
+              <option value="5">Continuous Optimization</option>
+            </select>
+          </div>
+          <div class="question" id="pillar6_q5">
+            <h3>How do you make decisions based on access patterns and metrics?</h3>
+            <button onclick="showOptions('pillar6_q5')">Choose One</button>
+            <select
+              name="pillar6_q5"
+              id="pillar6_q5_select"
+              style="display: none"
+              onchange="enableNextButton('pillar6_indicator', 'pillar6_q5','6',value)"
+            >
+              <option value="choose">Choose an option</option>
+              <option value="0">No</option>
+              <option value="1">Reactive Decision-making</option>
+              <option value="2">Basic Monitoring</option>
+              <option value="3">Data-Driven Decision-making</option>
+              <option value="4">Automation and Optimization</option>
+              <option value="5">Predictive and Proactive Optimization</option>
+            </select>
+          </div>
+  
+          <!-- Add more questions for Pillar 1 -->
+          <!-- Repeat this structure for Questions 2 to 5 in Pillar 1 -->
+          <!-- Add pillar indicator -->
+          <div class="pillar-indicator">
+            <span id="pillar6_indicator" style="font-size: 25px;font-weight: 700;">0</span><span style="font-size: 25px;font-weight: 700;">/5</span>
+          </div>
+        </div>
+  
+        <button onclick="showNextPillar()" id="nextButton" disabled>
+          Next Pillar
+        </button>
+        <button
+          onclick="calculatePoints()"
+          id="calculateButton"
+          style="display: none"
+        >
+          Calculate Points
+        </button>
+      </div>
+
+    </div>
+
+    <footer class="simple-footer">
+        <div class="logo-section">
+            <img src="assets/MicrosoftTeams-image.png" alt="NashTech Logo" class="logo">
+        </div>
+    
+        <div class="social-links">
+            <a href="https:/#" class="social-link" target="_blank">
+                <img src="facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="https:/#" class="social-link" target="_blank">
+                <img src="twitter-icon.png" alt="Twitter">
+            </a>
+            <a href="https:/#" class="social-link" target="_blank">
+                <img src="youtube-icon.png" alt="YouTube">
+            </a>
+            <a href="https:/#" class="social-link" target="_blank">
+                <img src="linkedin-icon.png" alt="LinkedIn">
+            </a>
+        </div>
+    
+        <div class="navigation">
+            <div class="nav-section">
+                <p>NashTech</p>
+                <ul>
+                    <li><a href="https://finops.ntglaunch.com/#">Contact us</a></li>
+                    <li><a href="https://finops.ntglaunch.com/#">Careers</a></li>
+                    <li><a href="https://finops.ntglaunch.com/#">Our locations</a></li>
+                </ul>
+            </div>
+    
+            <div class="nav-section">
+                <p>Home</p>
+                <ul>
+                    <li><a href="https://finops.ntglaunch.com/#">Our Solutions</a></li>
+                    <li><a href="https://finops.ntglaunch.com/#">Partners</a></li>
+                    <li><a href="https://finops.ntglaunch.com/#">Our Thinking</a></li>
+                </ul>
+            </div>
+    
+            <div class="nav-section">
+                <p>Useful Links</p>
+                <ul>
+                    <li><a href="https://finops.ntglaunch.com/#">Privacy Notices</a></li>
+                    <li><a href="https://finops.ntglaunch.com/#">Modern Slavery</a></li>
+                    <li><a href="https://finops.ntglaunch.com/#">Nash Accelerators</a></li>
+                </ul>
+            </div>
+    
+            <div class="nav-section">
+                <p>Support</p>
+                <ul>
+                    <li><a href="https://finops.ntglaunch.com/#">Knowledge Base</a></li>
+                    <li><a href="https://finops.ntglaunch.com/#">Contact Support</a></li>
+                    <li><a href="https://finops.ntglaunch.com/#">Privacy Policy</a></li>
+                    <li><a href="https://finops.ntglaunch.com/#">TOS</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+    
+        <div class="copyright-section">
+            <p>© 2023 · <a href="https://finops.ntglaunch.com/" target="_self" rel="home" aria-current="page">NashFinOpsNex</a> · All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+      let currentPillar = 1;
+      var previousSelectedValues = {};
+      let questionCounters = [0, 0, 0, 0, 0, 0]; // Initialize counters for each pillar
+      const calculateButton = document.getElementById("calculateButton");
+      const nextButton = document.getElementById("nextButton");
+
+      function showNextPillar() {
+        document.getElementById(`pillar${currentPillar}`).style.display =
+          "none";
+        if (currentPillar <= 5) {
+          currentPillar++;
+        }
+        const nextPillar = document.getElementById(`pillar${currentPillar}`);
+
+        if (nextPillar) {
+          nextPillar.style.display = "block";
+        }
+
+        // Toggle the visibility of buttons based on the current pillar
+        if (currentPillar === 6) {
+          nextButton.style.display = "none";
+          calculateButton.style.display = "inline-block";
+        } else {
+          nextButton.style.display = "inline-block";
+          calculateButton.style.display = "none";
+        }
+
+        // Disable next button until an option is selected
+        nextButton.disabled = true;
+      }
+
+      // Show Pillar 1 initially
+      document.getElementById("pillar1").style.display = "block";
+
+      function showOptions(questionId) {
+        const button = document.querySelector(`#${questionId} button`);
+        const select = document.querySelector(`#${questionId}_select`);
+
+        if (button && select) {
+          button.style.display = "none";
+          select.style.display = "inline-block";
+        }
+      }
+
+      function enableNextButton(indicatorId, questionId, index,value) {
+        nextButton.disabled = false;
+
+        
+        const questionIndicator = document.getElementById(indicatorId);
+
+        const currentCount = parseInt(questionIndicator.textContent);
+        const questionIndicator1 = document.getElementById(
+          `questionIndicator${index}`
+        );
+        if(value==="choose"){
+          previousSelectedValues="";
+          questionIndicator.textContent = (currentCount - 1).toString();
+            questionIndicator1.textContent = (currentCount - 1).toString();
+            
+            return false;
+          
+        }
+     if (previousSelectedValues !== questionId ) {
+          if (!isNaN(currentCount) && currentCount < 5) {
+            questionIndicator.textContent = (currentCount + 1).toString();
+            questionIndicator1.textContent = (currentCount + 1).toString();
+          }
+        }
+        previousSelectedValues = questionId;
+       
+        // // Increment the global counter for the specific pillar
+        //  questionCounters[pillarIndex - 1] += 1;
+      }
+
+      function jumpToPillar(pillarNumber) {
+        // Hide all pillars
+        for (let i = 1; i <= 6; i++) {
+          document.getElementById(`pillar${i}`).style.display = "none";
+        }
+
+        // Show the selected pillar
+        currentPillar = pillarNumber;
+        const selectedPillar = document.getElementById(
+          `pillar${currentPillar}`
+        );
+        if (selectedPillar) {
+          selectedPillar.style.display = "block";
+        }
+
+        // Toggle the visibility of buttons based on the current pillar
+        if (currentPillar === 6) {
+          nextButton.style.display = "none";
+          calculateButton.style.display = "inline-block";
+        } else {
+          nextButton.style.display = "inline-block";
+          calculateButton.style.display = "none";
+        }
+
+        // Disable next button until an option is selected
+        nextButton.disabled = true;
+      }
+
+      function calculatePoints() {
+        let totalPoints = 0;
+
+        for (let pillarIndex = 1; pillarIndex <= 6; pillarIndex++) {
+          for (let questionIndex = 1; questionIndex <= 5; questionIndex++) {
+            const questionName = `pillar${pillarIndex}_q${questionIndex}`;
+            const selectedOption = document.querySelector(
+              `select[name="${questionName}"]`
+            );
+
+            if (selectedOption && selectedOption.value !== "choose") {
+              totalPoints += parseInt(selectedOption.value);
+            }
+          }
+        }
+
+        alert(`Total Points: ${totalPoints}`);
+      }
+    </script>
+</body>
+</html>
