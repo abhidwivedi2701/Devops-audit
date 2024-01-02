@@ -10,7 +10,7 @@
 
     <nav class="navbar">
         <div class="navbar-left">
-            <img src="assets/MicrosoftTeams-image.png" alt="Logo" width="100" height="100">
+            <img src="/home/knoldus/Documents/devops-audit/assets/MicrosoftTeams-image.png" alt="Logo" style="width: 80px; height: auto;">
         </div>
         <div class="navbar-center">
             <ul>
@@ -604,107 +604,7 @@
         </div>
   
         <!-- pillar 6 -->
-        <div class="pillar" id="pillar6" style="display: none">
-          <h2>Pillar 6 : Performance Efficiency</h2>
-          <div class="question" id="pillar6_q1">
-            <h3>How do you select the best-performing architecture?</h3>
-            <button onclick="showOptions('pillar6_q1')">Choose One</button>
-            <select
-              name="pillar6_q1"
-              id="pillar6_q1_select"
-              style="display: none"
-              onchange="enableNextButton('pillar6_indicator', 'pillar6_q1','6',value)"
-            >
-              <option value="choose">Choose an option</option>
-              <option value="0">No</option>
-              <option value="1">Ad Hoc Decision</option>
-              <option value="2">Reactive Decision</option>
-              <option value="3">Data-Driven Decision</option>
-              <option value="4">Predictive Optimization</option>
-              <option value="5">Continuous Improvement and Optimization</option>
-            </select>
-          </div>
-  
-          <div class="question" id="pillar6_q2">
-            <h3>How can you factor cost requirements into decisions?</h3>
-            <button onclick="showOptions('pillar6_q2')">Choose One</button>
-            <select
-              name="pillar6_q2"
-              id="pillar6_q2_select"
-              style="display: none"
-              onchange="enableNextButton('pillar6_indicator', 'pillar6_q2','6',value)"
-            >
-              <option value="choose">Choose an option</option>
-              <option value="0">No</option>
-              <option value="1">No Consideration of Cost</option>
-              <option value="2">Afterthought Cost Assessment</option>
-              <option value="3">Early Cost Consideration</option>
-              <option value="4">Integrated Cost Management</option>
-              <option value="5">Automated Cost Optimization</option>
-            </select>
-          </div>
-          <div class="question" id="pillar6_q3">
-            <h3>How do you Evaluate the available compute options?</h3>
-            <button onclick="showOptions('pillar6_q3')">Choose One</button>
-            <select
-              name="pillar6_q3"
-              id="pillar6_q3_select"
-              style="display: none"
-              onchange="enableNextButton('pillar6_indicator', 'pillar6_q3','6',value)"
-            >
-              <option value="choose">Choose an option</option>
-              <option value="0">No</option>
-              <option value="1">Basic Understanding</option>
-              <option value="2">Awareness of Containers</option>
-              <option value="3">Practical VM and Container Usage</option>
-              <option value="4">Multi-Cloud and Serverless Exploration</option>
-              <option value="5">Workload-Centric Optimization</option>
-            </select>
-          </div>
-          <div class="question" id="pillar6_q4">
-            <h3>How do you continually evaluate compute needs based on metrics?</h3>
-            <button onclick="showOptions('pillar6_q4')">Choose One</button>
-            <select
-              name="pillar6_q4"
-              id="pillar6_q4_select"
-              style="display: none"style="display: none"
-              onchange="enableNextButton('pillar6_indicator', 'pillar6_q4','6',value)"
-            >
-              <option value="choose">Choose an option</option>
-              <option value="0">No</option>
-              <option value="1">Reactive Evaluation</option>
-              <option value="2">Scheduled Evaluation</option>
-              <option value="3">Metric-Driven Scaling</option>
-              <option value="4">Predictive Analytics</option>
-              <option value="5">Continuous Optimization</option>
-            </select>
-          </div>
-          <div class="question" id="pillar6_q5">
-            <h3>How do you make decisions based on access patterns and metrics?</h3>
-            <button onclick="showOptions('pillar6_q5')">Choose One</button>
-            <select
-              name="pillar6_q5"
-              id="pillar6_q5_select"
-              style="display: none"
-              onchange="enableNextButton('pillar6_indicator', 'pillar6_q5','6',value)"
-            >
-              <option value="choose">Choose an option</option>
-              <option value="0">No</option>
-              <option value="1">Reactive Decision-making</option>
-              <option value="2">Basic Monitoring</option>
-              <option value="3">Data-Driven Decision-making</option>
-              <option value="4">Automation and Optimization</option>
-              <option value="5">Predictive and Proactive Optimization</option>
-            </select>
-          </div>
-  
-          <!-- Add more questions for Pillar 1 -->
-          <!-- Repeat this structure for Questions 2 to 5 in Pillar 1 -->
-          <!-- Add pillar indicator -->
-          <div class="pillar-indicator">
-            <span id="pillar6_indicator" style="font-size: 25px;font-weight: 700;">0</span><span style="font-size: 25px;font-weight: 700;">/5</span>
-          </div>
-        </div>
+        
   
         <button onclick="showNextPillar()" id="nextButton" disabled>
           Next Pillar
@@ -721,192 +621,249 @@
     </div>
 
     <footer class="simple-footer">
-        <div class="logo-section">
-            <img src="assets/MicrosoftTeams-image.png" alt="NashTech Logo" class="logo">
-        </div>
-    
-        <div class="social-links">
-            <a href="https:/#" class="social-link" target="_blank">
-                <img src="facebook-icon.png" alt="Facebook">
-            </a>
-            <a href="https:/#" class="social-link" target="_blank">
-                <img src="twitter-icon.png" alt="Twitter">
-            </a>
-            <a href="https:/#" class="social-link" target="_blank">
-                <img src="youtube-icon.png" alt="YouTube">
-            </a>
-            <a href="https:/#" class="social-link" target="_blank">
-                <img src="linkedin-icon.png" alt="LinkedIn">
-            </a>
-        </div>
-    
-        <div class="navigation">
-            <div class="nav-section">
-                <p>NashTech</p>
-                <ul>
+      <div class="container">
+          <!-- Logo Section -->
+          <div class="logo-section">
+              <img src="assets/MicrosoftTeams-image.png" alt="NashTech Logo" class="logo">
+          </div>
+  
+          <!-- Navigation Section -->
+          <div class="navigation">
+              <!-- NashTech -->
+              <div class="nav-section">
+                  <p>NashTech</p>
+                  <ul>
                     <li><a href="https://finops.ntglaunch.com/#">Contact us</a></li>
                     <li><a href="https://finops.ntglaunch.com/#">Careers</a></li>
                     <li><a href="https://finops.ntglaunch.com/#">Our locations</a></li>
                 </ul>
-            </div>
-    
-            <div class="nav-section">
-                <p>Home</p>
-                <ul>
+              </div>
+  
+              <!-- Home -->
+              <div class="nav-section">
+                  <p>Home</p>
+                  <ul>
                     <li><a href="https://finops.ntglaunch.com/#">Our Solutions</a></li>
                     <li><a href="https://finops.ntglaunch.com/#">Partners</a></li>
                     <li><a href="https://finops.ntglaunch.com/#">Our Thinking</a></li>
-                </ul>
-            </div>
-    
-            <div class="nav-section">
-                <p>Useful Links</p>
-                <ul>
+                  </ul>
+              </div>
+  
+              <!-- Useful Links -->
+              <div class="nav-section">
+                  <p>Useful Links</p>
+                  <ul>
                     <li><a href="https://finops.ntglaunch.com/#">Privacy Notices</a></li>
                     <li><a href="https://finops.ntglaunch.com/#">Modern Slavery</a></li>
                     <li><a href="https://finops.ntglaunch.com/#">Nash Accelerators</a></li>
-                </ul>
-            </div>
-    
-            <div class="nav-section">
-                <p>Support</p>
-                <ul>
+                  </ul>
+              </div>
+  
+              <!-- Support -->
+              <div class="nav-section">
+                  <p>Support</p>
+                  <ul>
                     <li><a href="https://finops.ntglaunch.com/#">Knowledge Base</a></li>
                     <li><a href="https://finops.ntglaunch.com/#">Contact Support</a></li>
                     <li><a href="https://finops.ntglaunch.com/#">Privacy Policy</a></li>
                     <li><a href="https://finops.ntglaunch.com/#">TOS</a></li>
-                </ul>
-            </div>
-        </div>
-
-        
-    
-        <div class="copyright-section">
+                  </ul>
+              </div>
+          </div>
+      </div>
+          <!-- Social Links -->
+          <div class="social-links">
+            <a href="https:/#" class="social-link" target="_blank">
+              <img src="assets/social-icons/facebook.png" alt="Facebook">
+          </a>
+          <a href="https:/#" class="social-link" target="_blank">
+              <img src="assets/social-icons/twitter.png" alt="Twitter">
+          </a>
+          <a href="https:/#" class="social-link" target="_blank">
+              <img src="assets/social-icons/youtube.png" alt="YouTube">
+          </a>
+          <a href="https:/#" class="social-link" target="_blank">
+              <img src="assets/social-icons/linkedin.png" alt="LinkedIn">
+          </a>
+          </div>
+  
+          <!-- Copyright Section -->
+          <div class="copyright-section">
             <p>© 2023 · <a href="https://finops.ntglaunch.com/" target="_self" rel="home" aria-current="page">NashFinOpsNex</a> · All rights reserved</p>
+          </div>
+      </div>
+  </footer>
+
+  <script>
+    let currentPillar = 1;
+    var previousSelectedValues = {};
+    let questionCounters = [0, 0, 0, 0, 0]; // Initialize counters for each pillar
+    const calculateButton = document.getElementById("calculateButton");
+    const nextButton = document.getElementById("nextButton");
+  
+    function showNextPillar() {
+      document.getElementById(`pillar${currentPillar}`).style.display = "none";
+      if (currentPillar <= 4) {
+        currentPillar++;
+      }
+      const nextPillar = document.getElementById(`pillar${currentPillar}`);
+  
+      if (nextPillar) {
+        nextPillar.style.display = "block";
+      }
+  
+      // Toggle the visibility of buttons based on the current pillar
+      if (currentPillar === 5) {
+        nextButton.style.display = "none";
+        calculateButton.style.display = "inline-block";
+      } else {
+        nextButton.style.display = "inline-block";
+        calculateButton.style.display = "none";
+      }
+  
+      // Disable next button until an option is selected
+      nextButton.disabled = true;
+    }
+  
+    // Show Pillar 1 initially
+    document.getElementById("pillar1").style.display = "block";
+  
+    function showOptions(questionId) {
+      const button = document.querySelector(`#${questionId} button`);
+      const select = document.querySelector(`#${questionId}_select`);
+  
+      if (button && select) {
+        button.style.display = "none";
+        select.style.display = "inline-block";
+      }
+    }
+  
+    function enableNextButton(indicatorId, questionId, index, value) {
+      nextButton.disabled = false;
+  
+      const questionIndicator = document.getElementById(indicatorId);
+  
+      const currentCount = parseInt(questionIndicator.textContent);
+      const questionIndicator1 = document.getElementById(
+        `questionIndicator${index}`
+      );
+      if (value === "choose") {
+        previousSelectedValues = "";
+        questionIndicator.textContent = (currentCount - 1).toString();
+        questionIndicator1.textContent = (currentCount - 1).toString();
+  
+        return false;
+      }
+      if (previousSelectedValues !== questionId) {
+        if (!isNaN(currentCount) && currentCount < 4) {
+          questionIndicator.textContent = (currentCount + 1).toString();
+          questionIndicator1.textContent = (currentCount + 1).toString();
+        }
+      }
+      previousSelectedValues = questionId;
+    }
+  
+    function jumpToPillar(pillarNumber) {
+      // Hide all pillars
+      for (let i = 1; i <= 5; i++) {
+        document.getElementById(`pillar${i}`).style.display = "none";
+      }
+  
+      // Show the selected pillar
+      currentPillar = pillarNumber;
+      const selectedPillar = document.getElementById(`pillar${currentPillar}`);
+      if (selectedPillar) {
+        selectedPillar.style.display = "block";
+      }
+  
+      // Toggle the visibility of buttons based on the current pillar
+      if (currentPillar === 5) {
+        nextButton.style.display = "none";
+        calculateButton.style.display = "inline-block";
+      } else {
+        nextButton.style.display = "inline-block";
+        calculateButton.style.display = "none";
+      }
+  
+      // Disable next button until an option is selected
+      nextButton.disabled = true;
+    }
+  
+    function calculatePoints() {
+      let totalPoints = 0;
+  
+      for (let pillarIndex = 1; pillarIndex <= 5; pillarIndex++) {
+        for (let questionIndex = 1; questionIndex <= 4; questionIndex++) {
+          const questionName = `pillar${pillarIndex}_q${questionIndex}`;
+          const selectedOption = document.querySelector(
+            `select[name="${questionName}"]`
+          );
+  
+          if (selectedOption && selectedOption.value !== "choose") {
+            totalPoints += parseInt(selectedOption.value);
+          }
+        }
+      }
+  
+      // Create a custom popup with the score message and buttons
+      let message;
+      if (totalPoints >= 0 && totalPoints <= 50) {
+        message = `Your Audit and Assessment score is: ${totalPoints} points. Poor score`;
+      } else if (totalPoints >= 50 && totalPoints <= 100) {
+        message = `Your Audit and Assessment score is: ${totalPoints} points. Good score`;
+      } else if (totalPoints > 100 && totalPoints <= 150) {
+        message = `Your Audit and Assessment score is: ${totalPoints} points. Excellent score`;
+      } else {
+        message = `Your Total Points: ${totalPoints}`;
+      }
+  
+      const popup = document.createElement('div');
+      popup.className = 'custom-popup';
+      popup.innerHTML = `
+        <p>${message}</p>
+        <div class="details-text">For more details : </div>
+        <div class="button-container">
+          <a href="https://staging.knoldus.com/" target="_blank"><button>Contact Us</button></a>
+          <button onclick="closePopup()">Close</button>
         </div>
-    </footer>
-
-    <script>
-      let currentPillar = 1;
-      var previousSelectedValues = {};
-      let questionCounters = [0, 0, 0, 0, 0, 0]; // Initialize counters for each pillar
-      const calculateButton = document.getElementById("calculateButton");
-      const nextButton = document.getElementById("nextButton");
-
-      function showNextPillar() {
-        document.getElementById(`pillar${currentPillar}`).style.display =
-          "none";
-        if (currentPillar <= 5) {
-          currentPillar++;
-        }
-        const nextPillar = document.getElementById(`pillar${currentPillar}`);
-
-        if (nextPillar) {
-          nextPillar.style.display = "block";
-        }
-
-        // Toggle the visibility of buttons based on the current pillar
-        if (currentPillar === 6) {
-          nextButton.style.display = "none";
-          calculateButton.style.display = "inline-block";
-        } else {
-          nextButton.style.display = "inline-block";
-          calculateButton.style.display = "none";
-        }
-
-        // Disable next button until an option is selected
-        nextButton.disabled = true;
+      `;
+  
+      document.body.appendChild(popup);
+    }
+  
+    function closePopup() {
+      const popup = document.querySelector('.custom-popup');
+      if (popup) {
+        popup.remove();
       }
-
-      // Show Pillar 1 initially
-      document.getElementById("pillar1").style.display = "block";
-
-      function showOptions(questionId) {
-        const button = document.querySelector(`#${questionId} button`);
-        const select = document.querySelector(`#${questionId}_select`);
-
-        if (button && select) {
-          button.style.display = "none";
-          select.style.display = "inline-block";
-        }
-      }
-
-      function enableNextButton(indicatorId, questionId, index,value) {
-        nextButton.disabled = false;
-
-        
-        const questionIndicator = document.getElementById(indicatorId);
-
-        const currentCount = parseInt(questionIndicator.textContent);
-        const questionIndicator1 = document.getElementById(
-          `questionIndicator${index}`
-        );
-        if(value==="choose"){
-          previousSelectedValues="";
-          questionIndicator.textContent = (currentCount - 1).toString();
-            questionIndicator1.textContent = (currentCount - 1).toString();
-            
-            return false;
-          
-        }
-     if (previousSelectedValues !== questionId ) {
-          if (!isNaN(currentCount) && currentCount < 5) {
-            questionIndicator.textContent = (currentCount + 1).toString();
-            questionIndicator1.textContent = (currentCount + 1).toString();
-          }
-        }
-        previousSelectedValues = questionId;
-       
-        // // Increment the global counter for the specific pillar
-        //  questionCounters[pillarIndex - 1] += 1;
-      }
-
-      function jumpToPillar(pillarNumber) {
-        // Hide all pillars
-        for (let i = 1; i <= 6; i++) {
-          document.getElementById(`pillar${i}`).style.display = "none";
-        }
-
-        // Show the selected pillar
-        currentPillar = pillarNumber;
-        const selectedPillar = document.getElementById(
-          `pillar${currentPillar}`
-        );
-        if (selectedPillar) {
-          selectedPillar.style.display = "block";
-        }
-
-        // Toggle the visibility of buttons based on the current pillar
-        if (currentPillar === 6) {
-          nextButton.style.display = "none";
-          calculateButton.style.display = "inline-block";
-        } else {
-          nextButton.style.display = "inline-block";
-          calculateButton.style.display = "none";
-        }
-
-        // Disable next button until an option is selected
-        nextButton.disabled = true;
-      }
-
-      function calculatePoints() {
-        let totalPoints = 0;
-
-        for (let pillarIndex = 1; pillarIndex <= 6; pillarIndex++) {
-          for (let questionIndex = 1; questionIndex <= 5; questionIndex++) {
-            const questionName = `pillar${pillarIndex}_q${questionIndex}`;
-            const selectedOption = document.querySelector(
-              `select[name="${questionName}"]`
-            );
-
-            if (selectedOption && selectedOption.value !== "choose") {
-              totalPoints += parseInt(selectedOption.value);
-            }
-          }
-        }
-
-        alert(`Total Points: ${totalPoints}`);
-      }
-    </script>
+    }
+  </script>
+  <style>
+    .custom-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-color: #f9f9f9;
+    text-align: center; /* Center the text */
+    }
+    
+    .custom-popup .details-text {
+    text-align: left; /* Align text to the left */
+    font-style: italic; /* Italicize the text */
+    margin-bottom: 10px; /* Add margin for spacing */
+     color:rgb(108, 105, 105);
+    }
+    
+    .custom-popup .button-container {
+    margin-top: 20px; /* Add margin to create a gap */
+    }
+    
+    .custom-popup .button-container button {
+    margin: 0 10px; /* Add margin to create a gap */
+    }
+    </style>
+  
 </body>
 </html>
